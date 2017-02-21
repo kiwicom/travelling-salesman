@@ -1,0 +1,20 @@
+#!/usr/bin/env python2.7
+import random
+import string
+
+def random_cities(n_cities):
+    cities = set()
+    while len(cities) < n_cities:
+        city = "".join(random.choice(string.letters) for __ in range(3)).upper()
+        cities.add(city)
+    return cities
+
+N_CITIES = 10
+cities = random_cities(N_CITIES)
+
+for src in cities:
+    for dst in cities:
+        if src == dst:
+            continue
+        for day in range(N_CITIES):
+            print("{} {} {} {}".format(src, dst, day, random.randint(10, 1500)))
