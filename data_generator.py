@@ -6,11 +6,12 @@ def random_cities(n_cities):
     while len(cities) < n_cities:
         city = "".join(random.choice(string.ascii_uppercase) for __ in range(3))
         cities.add(city)
-    return cities
+    return list(cities)
 
 N_CITIES = 10
 cities = random_cities(N_CITIES)
 
+print(random.choice(cities))
 for src in cities:
     for dst in cities:
         if src == dst:
