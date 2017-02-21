@@ -1,11 +1,10 @@
-#!/usr/bin/env python2.7
 import random
 import string
 
 def random_cities(n_cities):
     cities = set()
     while len(cities) < n_cities:
-        city = "".join(random.choice(string.letters) for __ in range(3)).upper()
+        city = "".join(random.choice(string.ascii_uppercase) for __ in range(3))
         cities.add(city)
     return cities
 
