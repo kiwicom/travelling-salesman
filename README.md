@@ -1,8 +1,8 @@
 # Rules:
-- Find the Hamiltonian cycle in time dependant flight graph 
+- Find the Hamiltonian cycle in time dependant flight graph
 - You are given:
     - `m` flights flying between `n` cities
-    - `n+1` days to visit `n` cities
+    - `n` days to visit `n` cities
     - Start/end airport (round trip)
 - Being at day `i` in city `x` means you can catch all the flights on day `i+1` from city `x`
 - All flights are immediate, they take no time.
@@ -21,6 +21,13 @@
 <FROM> <TO> <DateOfDeparture> <PRICE>
 ...
 ```
+Some remarks about input:
+ - `<FROM>`, `<TO>` - IATA codes - 3 English alphabet uppercase letters A-Z.
+ - `<PRICE>` will be positive integer that fits into `uint16_t` - 16 bit unsigned integer (0 < `<PRICE>` <= 65535). (No prefixes, no hexa, nothing. Just number. :-])
+ - Input data will be ordered lexicographically `(FROM, TO, DateOfDeparture)`,
+ with `FROM/TO` ordering to be also lexicographical. If this seems to be
+ confusing, just look at the output of `data_generator.py`.
+
 #### e.g.:
 ```
 NAP
@@ -46,3 +53,4 @@ NAP BRQ 0 10
 BRQ FCO 1 40
 FCO NAP 2 3
 ```
+
