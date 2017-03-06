@@ -15,8 +15,8 @@
 competitor will earn points.
     * If competitor's program gives wrong output, competitor will get 0 points.
     * If competitor's program gives valid output, competitor will get P points, which will be computed as follows.
-        * If competitor's program's output gives price which is equal to best one or is better than best one then P=log_2(size of particular dataset)
-        * If competitor's program's output is worse than best one then P=[(b/y)^2]*log_2(size of particular dataset) where b is best price amongst all competitors and y is your price.
+        * If competitor's program's output gives price which is equal to best one or is better than best one than P=log_2(size of particular dataset)
+        * If competitor's program's output is worse than best one than P=[(b/y)^2]*log_2(size of particular dataset) where b is best price amongst all competitors and y is your price.
 * Total points for given solution will be sum of points earned in each dataset
 * If somebody gives better solution than best one, everybody's points are going to
 be recomputed based on how good is their solution relatively to the new best one.
