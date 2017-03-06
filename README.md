@@ -1,5 +1,5 @@
 # Rules:
-- Find the Hamiltonian cycle in time dependant flight graph
+- Find the Hamiltonian cycle in time dependent flight graph
 - You are given:
     - `m` flights flying between `n` cities
     - `n` days to visit `n` cities
@@ -11,7 +11,7 @@
 - We guarantee, that at least one Hamiltonian cycle in any given graph, exists.
 
 # Evaluation
-- You have 30 seconds for each dataset to produce valid output. After this period we kill your program if it hadn't already finished and process what your program outputted up to this point. Invalid output will result in 0 points but killing your program as such doesn't affect awarded points as long as you manage to produce valid result.
+- You have 30 seconds for each dataset to produce valid output. After this period we kill your program if it hadn't already finished and process what your program outputted up to this point. Invalid output will result in 0 points but killing your program as such doesn't affect awarded points as long as you manage to produce valid result. Detailed description of our scoring system can be found in [scoring README](scoring_system/README.md).
 
 # Program:
 - Executable in `/app/run`
