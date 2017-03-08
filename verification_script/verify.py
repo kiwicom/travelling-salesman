@@ -17,9 +17,11 @@ input_cities = set()
 input_flights = dict()
 input_start_city = ''
 
-input_start_city = input.readline().rstrip()
+input_start_city = sys.intern(input.readline().rstrip())
 for l in input.readlines():
     [f, t, d, p] = l.rstrip().split(' ') #From_city, To_city, Day, Price
+    f = sys.intern(f)
+    t = sys.intern(t)
     d = int(d)
     p = int(p)
 
@@ -38,6 +40,8 @@ calculated_price = 0
 output_price = int(output.readline().rstrip())
 for l in output.readlines():
     [f, t, d, p] = l.rstrip().split(' ') #From_city, To_city, Day, Price
+    f = sys.intern(f)
+    t = sys.intern(t)
     d = int(d)
     p = int(p)
 
