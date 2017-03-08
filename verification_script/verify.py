@@ -32,6 +32,7 @@ for l in input:
         input_flights[(f, t, d)] = p
     input_cities.add(f)
     input_cities.add(t)
+input.close()
 
 output_flights = list()
 output_price = 0
@@ -50,6 +51,7 @@ for l in output:
         sys.exit(1)
     calculated_price += input_flights[(f, t, d)]
     output_flights.append((f, t, d))
+output.close()
 
 if calculated_price != output_price:
     print("Error: Price is not good")
