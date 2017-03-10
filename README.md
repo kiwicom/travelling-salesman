@@ -12,6 +12,7 @@
 
 # Evaluation
 - You have 30 seconds for each dataset to produce valid output. After this period we kill your program if it hadn't already finished and process what your program outputted up to this point. Invalid output will result in 0 points but killing your program as such doesn't affect awarded points as long as you manage to produce valid result. Detailed description of our scoring system can be found in [scoring README](scoring_system/README.md).
+- Evaluation data will be sampled the same way as the training [real data](real_data) - we will use real world prices of flights.
 
 # Program:
 - Executable in `/app/run`
