@@ -17,9 +17,11 @@ input_cities = set()
 input_flights = dict()
 input_start_city = ''
 
-input_start_city = input.readline().rstrip()
-for l in input.readlines():
+input_start_city = sys.intern(input.readline().rstrip())
+for l in input:
     [f, t, d, p] = l.rstrip().split(' ') #From_city, To_city, Day, Price
+    f = sys.intern(f)
+    t = sys.intern(t)
     d = int(d)
     p = int(p)
 
@@ -30,14 +32,17 @@ for l in input.readlines():
         input_flights[(f, t, d)] = p
     input_cities.add(f)
     input_cities.add(t)
+input.close()
 
 output_flights = list()
 output_price = 0
 calculated_price = 0
 
 output_price = int(output.readline().rstrip())
-for l in output.readlines():
+for l in output:
     [f, t, d, p] = l.rstrip().split(' ') #From_city, To_city, Day, Price
+    f = sys.intern(f)
+    t = sys.intern(t)
     d = int(d)
     p = int(p)
 
@@ -46,6 +51,7 @@ for l in output.readlines():
         sys.exit(1)
     calculated_price += input_flights[(f, t, d)]
     output_flights.append((f, t, d))
+output.close()
 
 if calculated_price != output_price:
     print("Error: Price is not good")
