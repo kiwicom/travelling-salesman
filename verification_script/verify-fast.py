@@ -30,7 +30,10 @@ for l in input.readlines():
     [f, t, d, p] = l.rstrip().split(' ') #From_city, To_city, Day, Price
     d = int(d)
     p = int(p)
-    if (f, t, d, p) not in output_flights:
-        print("Error: Flight on output is not in input")
-        sys.exit(1)
+    if (f, t, d, p) in output_flights:
+        output_flights.remove((f, t, d, p))
+
+if len(output_flights) > 0:
+    print("Error: Flight on output is not in input")
+    sys.exit(1)
 
